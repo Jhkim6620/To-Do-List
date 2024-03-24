@@ -1,0 +1,131 @@
+/* 전체 레이아웃 스타일 */
+.app {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 폼 스타일 */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* 체크박스와 완료된 태스크 스타일 */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.completed td {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* 삭제 버튼 스타일 */
+button {
+  font-size: 16px;
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+body {
+  margin : 0;
+  padding : 0;
+  background-color:lightgrey;
+}
+
+
+.date-navigator {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.date-navigator h1 {
+  margin: 0 20px; /* 날짜 제목의 좌우 여백 */
+  font-weight: bold; /* 글씨 두껍게 */
+}
+
+.date-navigator button {
+  padding: 5px 10px;
+  margin: 0 5px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.date-navigator button:hover {
+  background-color: #0056b3;
+}
+
+
+.highlighted {
+  color:#0056b3; 
+  font-weight: bold; 
+  border: 2px solid blue;
+}
+
