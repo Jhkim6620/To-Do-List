@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
+const formatDate = (date) => {
+  return new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' }).format(date);
+};
+const formatDateWithDay = (date) => {
+  return new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long'}).format(date);
+};
+
+
 function App() {
   
 /* -----------------------------------변수 섹션----------------------------------- */
@@ -12,7 +21,7 @@ function App() {
   const [taskInput, setTaskInput] = useState('');
 
 
-  
+
 /* -----------------------------------상태 관리 섹션----------------------------------- */
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -24,9 +33,6 @@ function App() {
   }, [tasks]);
 
 
-
-
-
   /* -----------------------------------함수 섹션----------------------------------- */
   const changeDate = (offset) => {
     setCurrentDate((prevDate) => {
@@ -34,10 +40,6 @@ function App() {
       newDate.setDate(newDate.getDate() + offset);
       return newDate;
     });
-  };
-
-  const formatDate = (date) => {
-    return new Intl.DateTimeFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
   };
 
 
